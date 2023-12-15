@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Replace with the actual IP address or hostname of your remote server
+# actual ip will be replaced
 REMOTE_SERVER="192.168.1.100"
 
-# Attempt to determine the OS
+# check determine  whether the remote server is windows or linux
 is_windows() {
     ssh "$REMOTE_SERVER" 'systeminfo' 2>/dev/null | grep -iq 'Microsoft Windows' && return 0
     return 1
